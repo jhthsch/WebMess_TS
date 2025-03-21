@@ -1,0 +1,36 @@
+# Bytecode-Cache-Dateien
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtuelle Umgebungen
+venv/
+env/
+*.venv
+
+# Distribution / Build-Verzeichnisse
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Log-Dateien
+*.log
+
+# ini Dateien
+config_*.ini
+
+# Jupyter Notebook-Checkpoints
+.ipynb_checkpoints/
+
+# IDEs / Editor-spezifische Dateien
+.vscode/
+.idea/
+.ruff_cache
+*.sublime-workspace
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
