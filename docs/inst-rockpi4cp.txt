@@ -1,0 +1,71 @@
+script/steps to install usbdux on rockpi4c+
+-	Install armbian ubuntu 23.02.2 -> https://fi.mirror.armbian.de/dl/rockpi-4cplus/archive/
+-	Get kernel headers installed.
+-       sudo apt update && apt upgrade -y && install linux-headers-current-rockchip64
+-	download DWService install scirpt-> chmod +rwx ./dwinstall.sh
+-	./dwinstall.sh
+(-	git clone https://github.com/glasgowneuro/comedi_raspberry_pi_bullseye.git)
+(-	follow the instruction on https://github.com/glasgowneuro/comedi_raspberry_pi_bullseye)
+(-	copy firmware usbduxsigma_firmware.bin to /lib/firmware as sudo oder update firmware 黚er armbian-config->firmware)
+(-      ls /lib/firmware/usbdux*)
+-	update/upgrade python3
+-	sudo apt-get install python3-devF
+- 	sudo apt install python3-pip
+-	pip install setuptools (--break-system-packages on Debian)
+-	sudo apt install swig
+-	sudo pip3 install swig
+-	install usdbux: https://github.com/glasgowneuro/usbdux
+-		sudo apt install libcomedi-dev
+		sudo apt install libcomedi0
+		sudo apt install firmware-linux-free
+-	install pyusbdux: https://github.com/berndporr/pyusbdux
+		pip3 install pyusbdux
+-	install comedirecord: https://github.com/berndporr/comedirecord
+		install iir1: https://github.com/berndporr/iir1 mit git clonen und compilieren
+			git clone https://github.com/berndporr/iir1.git
+			cmake.
+			make
+			sudo make install
+			oder nur in ubuntu: 	sudo add-apt-repository ppa:berndporr/dsp
+					sudo apt install iir1
+					sudo apt install iir1
+		sudo apt install libqwt-qt5-dev libfftw3-dev libcomedi-dev qtbase5-dev
+		cmake .
+		make
+		sudo make install
+-	https://github.com/berndporr/py-iir-filter
+	pip install py-iir-filter
+-	install uldaq: https://github.com/mccdaq/uldaq
+		git clone https://github.com/mccdaq/uldaq.git
+		sudo apt-get install gcc g++ make
+		sudo apt-get install libusb-1.0-0-dev
+		wget -N https://github.com/mccdaq/uldaq/releases/download/v1.2.1/libuldaq-1.2.1.tar.bz2
+		tar -xvjf libuldaq-1.2.1.tar.bz2
+		cd libuldaq-1.2.1
+		./configure && make
+		sudo make install
+		pip3 install uldaq
+-	install mcculw: https://github.com/mccdaq (NUR WINDOWS)
+-	install daqhats: https://github.com/mccdaq/daqhats
+		git clone https://github.com/mccdaq/daqhats.git
+		cd daqhats
+		sudo ./install.sh
+-	sudo apt-get install python3-tk
+- sudo apt update
+- sudo apt install python3-dev python3-pip
+
+-	git clone https://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@github.com/andreasrothh2/webapp_mcc128
+-	pip3 install -r requirements.txt
+-	pip3 install matplotlib
+-	sudo apt install audacity (um portaudio zu installieren)
+-	install vscode: sudo apt install code
+
+
+beim clonen einer sd!!
+Die UUID der sd, auf den der clone geschrieben wurde muss ggf. in folgenden Files
+auf der geklonten Karte angepasst werden
+
+    /boot/armbianEnv.txt
+    /etc/fstab
+
+
